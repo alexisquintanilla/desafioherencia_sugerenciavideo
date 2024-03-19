@@ -31,6 +31,7 @@ class Reproductor {
         multimediaDom.publico(this.#id, modificarTiempo)
         console.log(modificarTiempo)
     }
+
 }
 
 class Multimedia extends Reproductor {
@@ -42,7 +43,9 @@ class Multimedia extends Reproductor {
     get getUrl() {
         return this.#url
     }
-
+    // setInicio() {
+    //     return "Este método es para realizar un cambio en la URL del video"
+    // }
 }
 
 // CREACION DE INSTANCIAS Y EJECUCION DE FUNCIONES.
