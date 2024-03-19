@@ -1,3 +1,4 @@
+// VARIABLES PARA MODIFICAR DOM
 const musica = document.querySelector("#musica")
 const peliculas = document.querySelector("#peliculas")
 const series = document.querySelector("#series")
@@ -15,7 +16,6 @@ const multimediaDom = (() => {
         }
     }
 })();
-// VARIABLES PARA MODIFICAR DOM
 
 
 // CREACION DE PLANTILLAS
