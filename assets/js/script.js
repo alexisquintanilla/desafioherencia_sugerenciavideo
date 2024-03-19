@@ -1,21 +1,22 @@
+const musica = document.querySelector("#musica")
+const peliculas = document.querySelector("#peliculas")
+const series = document.querySelector("#series")
 
 //IIFE
 const multimediaDom = (() => {
-    const multimediaAtributo = (id, atributo, url) => {
-        id[atributo] = url
+    const multimediaAtributo = (id, url) => {
+        const multimedia = id
+        multimedia.setAttribute("src", url)
     }
     return {
         // clausula
         insertarUrl(id, url) {
-            multimediaAtributo(id, "src", url)
+            multimediaAtributo(id, url)
         }
     }
 })();
 // VARIABLES PARA MODIFICAR DOM
 
-const musica = document.querySelector("#musica")
-const peliculas = document.querySelector("#peliculas")
-const series = document.querySelector("#series")
 
 // CREACION DE PLANTILLAS
 class Multimedia {
@@ -39,6 +40,7 @@ class Reproductor extends Multimedia {
     }
     playMultimedia() {
         multimediaDom.insertarUrl(this.#id, this.getUrl)
+
     }
     setInicio(tiempo) {
         const modificarTiempo = `${this.getUrl}?start=${tiempo}`
@@ -57,6 +59,7 @@ reproMusica.setInicio(30)
 
 const reproPelicula = new Reproductor(peliculas, "https://www.youtube.com/embed/1roy4o4tqQM?si=Psyd5qnWDMGCvwpd")
 reproPelicula.playMultimedia()
+console.log(reproPelicula.playMultimedia())
 reproPelicula.setInicio(33)
 
 const reproSerie = new Reproductor(series, "https://www.youtube.com/embed/a1zmhHLVrq0?si=iuky9OuRIVGZ-BCA")
