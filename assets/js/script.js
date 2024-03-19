@@ -59,7 +59,6 @@ reproMusica.setInicio(30)
 
 const reproPelicula = new Reproductor(peliculas, "https://www.youtube.com/embed/1roy4o4tqQM?si=Psyd5qnWDMGCvwpd")
 reproPelicula.playMultimedia()
-console.log(reproPelicula.playMultimedia())
 reproPelicula.setInicio(33)
 
 const reproSerie = new Reproductor(series, "https://www.youtube.com/embed/a1zmhHLVrq0?si=iuky9OuRIVGZ-BCA")
